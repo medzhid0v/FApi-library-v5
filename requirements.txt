@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pydantic
+tinydb
+requests
+sqlalchemy
