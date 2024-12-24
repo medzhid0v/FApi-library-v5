@@ -14,3 +14,8 @@ pip install -r requirements.txt
 # FApi server start
 uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
 ```
+
+```bash
+# Run tests
+pytest -vs .\app\test\
+```
