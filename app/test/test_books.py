@@ -59,11 +59,11 @@ def test_delete_book():
     created_book = create_response.json()
     book_id = created_book["id"]
 
-    delete_response = client.delete(f"/books/{book_id}/")
+    delete_response = client.delete(f"/book/{book_id}/")
     assert delete_response.status_code == 200
-    assert delete_response.json() == {"message": f"Книга с ID {book_id} удалена"}
+    assert delete_response.json() == {"message": f"Книга с ID {book_id} удалена!"}
 
-    get_response = client.get(f"/books/{book_id}/")
+    get_response = client.get(f"/book/{book_id}/")
     assert get_response.status_code == 404
 
     list_response = client.get("/book/")
